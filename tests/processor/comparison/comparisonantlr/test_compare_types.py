@@ -115,6 +115,12 @@ def test_compare_int():
     assert False == compare_int(None, '', EQ)
 
 
+def test_compare_in():
+    from processor.comparison.comparisonantlr.compare_types import compare_in ,EQ
+    assert  True == compare_in(1,1,EQ)
+    assert False == compare_in('',None,EQ)
+
+
 def test_compare_float():
     from processor.comparison.comparisonantlr.compare_types import compare_float, EQ
     assert True == compare_float(1.00001, 1.00001, EQ)
